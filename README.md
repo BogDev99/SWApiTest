@@ -7,5 +7,7 @@
 * Обрабатывает долгие и ошибочные запросы  
 
 Useful links:
+
 https://medium.com/better-programming/basic-api-request-with-swift-4-d8bf829524f
 https://www.tutorialspoint.com/how-to-make-an-http-request-on-ios-app-using-swift
+https://habr.com/ru/post/414359/
