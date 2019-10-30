@@ -6,6 +6,8 @@
 * Хранит информацию об уже просмотренных персонажах и показывает все данные о них без доступа к сети
 * Обрабатывает долгие и ошибочные запросы  
 
+Rqeuest link: `https://swapi.co/api/`
+
 Useful links:
 
 https://medium.com/better-programming/basic-api-request-with-swift-4-d8bf829524f
