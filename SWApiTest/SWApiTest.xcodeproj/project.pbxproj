@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CEA37335236A2694001F4C54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA37334236A2694001F4C54 /* AppDelegate.swift */; };
-		CEA37337236A2694001F4C54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA37336236A2694001F4C54 /* ViewController.swift */; };
 		CEA3733A236A2694001F4C54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA37338236A2694001F4C54 /* Main.storyboard */; };
 		CEA3733C236A269D001F4C54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA3733B236A269D001F4C54 /* Assets.xcassets */; };
 		CEA3733F236A269D001F4C54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA3733D236A269D001F4C54 /* LaunchScreen.storyboard */; };
+		CEA37347236A395F001F4C54 /* SWListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA37346236A395F001F4C54 /* SWListViewController.swift */; };
+		CEA37349236B55CD001F4C54 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA37348236B55CD001F4C54 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CEA37331236A2694001F4C54 /* SWApiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWApiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA37334236A2694001F4C54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEA37336236A2694001F4C54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEA37339236A2694001F4C54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEA3733B236A269D001F4C54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA3733E236A269D001F4C54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEA37340236A269D001F4C54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA37346236A395F001F4C54 /* SWListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWListViewController.swift; sourceTree = "<group>"; };
+		CEA37348236B55CD001F4C54 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				CEA37334236A2694001F4C54 /* AppDelegate.swift */,
-				CEA37336236A2694001F4C54 /* ViewController.swift */,
+				CEA37346236A395F001F4C54 /* SWListViewController.swift */,
+				CEA37348236B55CD001F4C54 /* Network.swift */,
 				CEA37338236A2694001F4C54 /* Main.storyboard */,
 				CEA3733B236A269D001F4C54 /* Assets.xcassets */,
 				CEA3733D236A269D001F4C54 /* LaunchScreen.storyboard */,
@@ -135,8 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEA37337236A2694001F4C54 /* ViewController.swift in Sources */,
 				CEA37335236A2694001F4C54 /* AppDelegate.swift in Sources */,
+				CEA37349236B55CD001F4C54 /* Network.swift in Sources */,
+				CEA37347236A395F001F4C54 /* SWListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
