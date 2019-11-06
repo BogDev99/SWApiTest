@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F1F86C523722044006A1347 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F86C423722044006A1347 /* Starship.swift */; };
+		6F1F86C723737532006A1347 /* SWDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F86C623737532006A1347 /* SWDetailsViewController.swift */; };
 		CEA37335236A2694001F4C54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA37334236A2694001F4C54 /* AppDelegate.swift */; };
 		CEA3733A236A2694001F4C54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA37338236A2694001F4C54 /* Main.storyboard */; };
 		CEA3733C236A269D001F4C54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA3733B236A269D001F4C54 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		6F1F86C423722044006A1347 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		6F1F86C623737532006A1347 /* SWDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDetailsViewController.swift; sourceTree = "<group>"; };
 		CEA37331236A2694001F4C54 /* SWApiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWApiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA37334236A2694001F4C54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA37339236A2694001F4C54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				CEA3733D236A269D001F4C54 /* LaunchScreen.storyboard */,
 				CEA37340236A269D001F4C54 /* Info.plist */,
 				6F1F86C423722044006A1347 /* Starship.swift */,
+				6F1F86C623737532006A1347 /* SWDetailsViewController.swift */,
 			);
 			path = SWApiTest;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				CEA37349236B55CD001F4C54 /* Network.swift in Sources */,
 				CEA37347236A395F001F4C54 /* SWListViewController.swift in Sources */,
 				6F1F86C523722044006A1347 /* Starship.swift in Sources */,
+				6F1F86C723737532006A1347 /* SWDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
