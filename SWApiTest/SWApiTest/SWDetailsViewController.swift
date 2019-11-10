@@ -9,11 +9,16 @@
 import UIKit
 
 class SWDetailsViewController: UIViewController {
-
+    @IBOutlet weak var textView: UITextView!
+    
+    public var starship: Starship?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        textView.text = starship?.films?.joined(separator: "\n")
     }
     
 }

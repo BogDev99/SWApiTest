@@ -14,6 +14,7 @@ class SWListViewController: UIViewController {
 
     private let apiURL = "https://swapi.co/api/starships"
     private var content: [Starship] = []
+    private var starship: Starship?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,15 @@ class SWListViewController: UIViewController {
         }
         task.resume()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SWDetailsViewController" {
+            if let viewController = segue.destination as? SWDetailsViewController {
+                viewController.starship = starship
+            }
+            
+        }
+    }
 }
 
 extension SWListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -67,9 +77,11 @@ extension SWListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+       
         // TODO: -
-        print(content[indexPath.row])
+        starship = content[indexPath.row]
+        performSegue(withIdentifier: "SWDetailsViewController", sender: self)
+        print(starship)
     }
 }
 
