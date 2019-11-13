@@ -25,10 +25,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="iOi-3B-v2W" firstAttribute="top" secondItem="mcd-8v-s5e" secondAttribute="top" id="XWO-e7-Aqp"/>
-                            <constraint firstItem="mcd-8v-s5e" firstAttribute="bottom" secondItem="iOi-3B-v2W" secondAttribute="bottom" id="nUh-tb-OyM"/>
+                            <constraint firstItem="iOi-3B-v2W" firstAttribute="bottom" secondItem="mcd-8v-s5e" secondAttribute="bottom" id="Zha-SP-XLD"/>
+                            <constraint firstItem="iOi-3B-v2W" firstAttribute="top" secondItem="mcd-8v-s5e" secondAttribute="top" id="bIK-R3-5PP"/>
                             <constraint firstItem="iOi-3B-v2W" firstAttribute="leading" secondItem="mcd-8v-s5e" secondAttribute="leading" id="qeI-Cl-Odq"/>
-                            <constraint firstItem="mcd-8v-s5e" firstAttribute="trailing" secondItem="iOi-3B-v2W" secondAttribute="trailing" id="xq5-92-Wph"/>
+                            <constraint firstItem="iOi-3B-v2W" firstAttribute="trailing" secondItem="mcd-8v-s5e" secondAttribute="trailing" id="z4J-cs-TSa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mcd-8v-s5e"/>
                     </view>

@@ -11,19 +11,35 @@ import UIKit
 class SWListViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
-
+    
     private let apiURL = "https://swapi.co/api/starships"
     private var content: [Starship] = []
     private var starship: Starship?
+    private var filtredStarshis = [Starship]()
     
+    private let searchController = UISearchController(searchResultsController: nil)
+    private var searchBarIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false }
+        return text.isEmpty
+    }
+    private var isFiltring: Bool {
+        return searchController.isActive && !searchBarIsEmpty
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
         
         tableView.delegate = self
         tableView.dataSource = self
-        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
     }
     
     private func fetchData() {
@@ -57,14 +73,33 @@ class SWListViewController: UIViewController {
             if let viewController = segue.destination as? SWDetailsViewController {
                 viewController.starship = starship
             }
-            
         }
     }
 }
 
-extension SWListViewController: UITableViewDelegate, UITableViewDataSource {
+extension SWListViewController: UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+    
+    private func filterContentForSearchText(_ searchText: String) {
+        filtredStarshis = content.filter({ (starship: Starship) -> Bool in
+            return (starship.name?.lowercased().contains(searchText.lowercased()))!
+        })
+        tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+        
+        var starhips: Starship
+        
+        if isFiltring {
+            starhips = filtredStarshis[indexPath.row]
+        } else {
+            starhips = content[indexPath.row]
+        }
+        
         cell.textLabel?.text = content[indexPath.row].name
         cell.detailTextLabel?.text = content[indexPath.row].starshipClass
         
@@ -72,6 +107,9 @@ extension SWListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltring {
+            return filtredStarshis.count
+        }
         return content.count
     }
     
