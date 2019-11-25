@@ -19,7 +19,7 @@ class SWListViewController: UIViewController {
     
     private let searchController = UISearchController(searchResultsController: nil)
     private var searchBarIsEmpty: Bool {
-        guard let text = searchController.searchBar.text else { return false }
+        guard let text = searchController.searchBar.text else { return true }
         return text.isEmpty
     }
     private var isFiltring: Bool {
@@ -100,8 +100,8 @@ extension SWListViewController: UITableViewDelegate, UITableViewDataSource, UISe
             starhips = content[indexPath.row]
         }
         
-        cell.textLabel?.text = content[indexPath.row].name
-        cell.detailTextLabel?.text = content[indexPath.row].starshipClass
+        cell.textLabel?.text = starhips.name
+        cell.detailTextLabel?.text = starhips.starshipClass
         
         return cell
     }
